@@ -12,6 +12,9 @@
 		5110518D289C589100FD5CD6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110518C289C589100FD5CD6 /* MainViewController.swift */; };
 		51105192289C589300FD5CD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51105191289C589300FD5CD6 /* Assets.xcassets */; };
 		51105195289C589300FD5CD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51105193289C589300FD5CD6 /* LaunchScreen.storyboard */; };
+		5110519D289C5E7300FD5CD6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110519C289C5E7300FD5CD6 /* MainView.swift */; };
+		5110519F289C61A800FD5CD6 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110519E289C61A800FD5CD6 /* UIViewExtension.swift */; };
+		512AE924289DC06E00750F71 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512AE923289DC06D00750F71 /* GameManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		51105191289C589300FD5CD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51105194289C589300FD5CD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51105196289C589300FD5CD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5110519C289C5E7300FD5CD6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		5110519E289C61A800FD5CD6 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		512AE923289DC06D00750F71 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		51105187289C589100FD5CD6 /* GuessTheFlag */ = {
 			isa = PBXGroup;
 			children = (
+				512AE928289DC1A000750F71 /* Extension */,
+				512AE927289DC19500750F71 /* Model */,
+				512AE926289DC19100750F71 /* View */,
+				512AE925289DC18B00750F71 /* Controller */,
 				51105188289C589100FD5CD6 /* AppDelegate.swift */,
 				5110518A289C589100FD5CD6 /* SceneDelegate.swift */,
-				5110518C289C589100FD5CD6 /* MainViewController.swift */,
 				51105191289C589300FD5CD6 /* Assets.xcassets */,
 				51105193289C589300FD5CD6 /* LaunchScreen.storyboard */,
 				51105196289C589300FD5CD6 /* Info.plist */,
 			);
 			path = GuessTheFlag;
+			sourceTree = "<group>";
+		};
+		512AE925289DC18B00750F71 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5110518C289C589100FD5CD6 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		512AE926289DC19100750F71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5110519C289C5E7300FD5CD6 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		512AE927289DC19500750F71 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				512AE923289DC06D00750F71 /* GameManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		512AE928289DC1A000750F71 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5110519E289C61A800FD5CD6 /* UIViewExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5110519F289C61A800FD5CD6 /* UIViewExtension.swift in Sources */,
+				512AE924289DC06E00750F71 /* GameManager.swift in Sources */,
 				5110518D289C589100FD5CD6 /* MainViewController.swift in Sources */,
+				5110519D289C5E7300FD5CD6 /* MainView.swift in Sources */,
 				51105189289C589100FD5CD6 /* AppDelegate.swift in Sources */,
 				5110518B289C589100FD5CD6 /* SceneDelegate.swift in Sources */,
 			);

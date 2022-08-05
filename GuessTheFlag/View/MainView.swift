@@ -13,19 +13,22 @@ class MainView: UIView {
         case buttonHeight = 100
     }
     
-    private lazy var firstFlagButton: UIButton = {
+    lazy var firstFlagButton: UIButton = {
         let view = UIButton()
         self.setUpProperties(of: view, title: "Flag1")
+        view.tag = 0
         return view
     }()
-    private lazy var secondFlagButton: UIButton = {
+    lazy var secondFlagButton: UIButton = {
         let view = UIButton()
         self.setUpProperties(of: view, title: "Flag2")
+        view.tag = 1
         return view
     }()
-    private lazy var thirdFlagButton: UIButton = {
+    lazy var thirdFlagButton: UIButton = {
         let view = UIButton()
         self.setUpProperties(of: view, title: "Flag3")
+        view.tag = 2
         return view
     }()
     
@@ -49,21 +52,24 @@ class MainView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.text = title
         button.setImage(UIImage(named: "us"), for: .normal)
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.gray.cgColor
     }
 
     private func setSubviewsLayout() {
+        
         NSLayoutConstraint.activate([
-            firstFlagButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
-            firstFlagButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-            firstFlagButton.widthAnchor.constraint(equalToConstant: LayoutConstant.buttonWidth.rawValue),
-            firstFlagButton.heightAnchor.constraint(equalToConstant: LayoutConstant.buttonHeight.rawValue)
+            secondFlagButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+            secondFlagButton.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
+            secondFlagButton.widthAnchor.constraint(equalToConstant: LayoutConstant.buttonWidth.rawValue),
+            secondFlagButton.heightAnchor.constraint(equalToConstant: LayoutConstant.buttonHeight.rawValue)
         ])
         
         NSLayoutConstraint.activate([
-            secondFlagButton.topAnchor.constraint(equalTo: firstFlagButton.bottomAnchor, constant: 20),
-            secondFlagButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-            secondFlagButton.widthAnchor.constraint(equalToConstant: LayoutConstant.buttonWidth.rawValue),
-            secondFlagButton.heightAnchor.constraint(equalToConstant: LayoutConstant.buttonHeight.rawValue)
+            firstFlagButton.bottomAnchor.constraint(equalTo: secondFlagButton.topAnchor, constant: -20),
+            firstFlagButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+            firstFlagButton.widthAnchor.constraint(equalToConstant: LayoutConstant.buttonWidth.rawValue),
+            firstFlagButton.heightAnchor.constraint(equalToConstant: LayoutConstant.buttonHeight.rawValue)
         ])
         
         NSLayoutConstraint.activate([
