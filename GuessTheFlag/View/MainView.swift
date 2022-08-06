@@ -11,6 +11,7 @@ class MainView: UIView {
     private enum LayoutConstant: CGFloat {
         case buttonWidth = 200
         case buttonHeight = 100
+        case elementsOffset = 20
     }
     
     lazy var firstFlagButton: UIButton = {
@@ -66,14 +67,14 @@ class MainView: UIView {
         ])
         
         NSLayoutConstraint.activate([
-            firstFlagButton.bottomAnchor.constraint(equalTo: secondFlagButton.topAnchor, constant: -20),
+            firstFlagButton.bottomAnchor.constraint(equalTo: secondFlagButton.topAnchor, constant: -LayoutConstant.elementsOffset.rawValue),
             firstFlagButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             firstFlagButton.widthAnchor.constraint(equalToConstant: LayoutConstant.buttonWidth.rawValue),
             firstFlagButton.heightAnchor.constraint(equalToConstant: LayoutConstant.buttonHeight.rawValue)
         ])
         
         NSLayoutConstraint.activate([
-            thirdFlagButton.topAnchor.constraint(equalTo: secondFlagButton.bottomAnchor, constant: 20),
+            thirdFlagButton.topAnchor.constraint(equalTo: secondFlagButton.bottomAnchor, constant: LayoutConstant.elementsOffset.rawValue),
             thirdFlagButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             thirdFlagButton.widthAnchor.constraint(equalToConstant: LayoutConstant.buttonWidth.rawValue),
             thirdFlagButton.heightAnchor.constraint(equalToConstant: LayoutConstant.buttonHeight.rawValue)
